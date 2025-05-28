@@ -1,0 +1,40 @@
+.offcanvas {
+  z-index: 3000;
+}
+
+.offcanvas-backdrop {
+  cursor: url("/icons/cursor-close.svg"), auto;
+
+  &.show {
+    opacity: 1;
+  }
+}
+
+.offcanvas-search {
+  height: max-content !important;
+  > .btn-close::before {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: var(--bg-4);
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    @include flex(center, center);
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .offcanvas-body {
+    padding: 60px 0;
+  }
+  .form-search-courses {
+    input {
+      border: 1px solid var(--Border);
+      border-radius: 8px;
+    }
+    .button-submit button {
+      border-radius: 8px;
+      background-color: var(--Secondary);
+    }
+  }
+}

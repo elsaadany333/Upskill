@@ -1,0 +1,169 @@
+.tf-button-default {
+    @include flex(center, center);
+    width: max-content;
+    border: 1px solid var(--Border);
+    background-color: var(--White);
+    border-radius: 4px;
+    padding: 5px 19.5px;
+    @include transition3();
+    &:hover {
+        background-color: var(--bg-1);
+        color: var(--Primary);
+    }
+    &.active {
+        background-color: var(--Primary);
+        border-color: var(--Primary);
+        color: var(--White);
+        &:hover {
+            background-color: #0d112b;
+        }
+    }
+}
+.tf-mobile-sidebar-btn {
+    display: none;
+    cursor: pointer;   
+    padding: 8px;
+    margin: 0;
+    color: #fff;
+    background: var(--Secondary);
+    position: fixed;
+    top: 30%;
+    z-index: 6;
+    font-size: 18px;
+    line-height: 1;
+    opacity: 0.85;
+    &.btn-right {
+        right: 0;
+        border-radius: 4px 0 0 4px;
+    }
+}
+.tf-btn-arrow {
+    @include flex(center, center);
+    width: max-content;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    @include transition3();
+    i {
+        font-size: 14px;
+    }
+    &:hover {
+        color: var(--Secondary);
+    }
+}
+
+.tf-btn {
+    @include flex(center, center);
+    width: max-content;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--White);
+    background-color: var(--Primary);
+    border-radius: 4px;
+    border: 1px solid var(--Primary);
+    padding: 12px 35px;
+    @include transition3();
+    i {
+        font-size: 14px;
+    }
+    &:hover {
+        background-color: var(--Secondary);
+        color: var(--White);
+        border-color: var(--Secondary);
+    }
+    &.style-secondary {
+        background-color: var(--Secondary);
+        color: var(--White);
+        border-color: var(--Secondary);
+        &:hover {
+            background-color: #e95e25;
+        }
+    }
+    &.style-third {
+        background-color: var(--White);
+        color: var(--Primary);
+        &:hover {
+            background-color: var(--Primary);
+            border-color: var(--Primary);
+            color: var(--White);
+        }
+    }
+    &.style-fourth {
+        background-color: var(--White);
+        color: var(--Secondary);
+        border-color: var(--Secondary);
+        &:hover {
+            background-color: var(--bg-4);
+        }
+    }
+    &.style-fifth {
+        background-color: var(--bg-1);
+        color: var(--Primary);
+        &:hover {
+            background-color: #d1d1d1;
+        }
+    }
+}
+
+.switch-item[type="checkbox"] {
+    position: relative;
+    width: 55px;
+    min-width: 55px;
+    height: 30px;
+    -webkit-appearance: none;
+    background: var(--bg-4);
+    border-radius: 999px;
+    @include transition3();
+    margin-right: 0;
+    &::before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        background: var(--White);
+        @include transition3();
+    }
+    &:checked {
+        background-color: var(--Primary);
+        &::before {
+            left: 28px;
+        }
+    }
+}
+
+.btn-style-2 {
+    @include d-flex();
+    gap: 12px;
+    .btn {
+        padding: 7px 7px 3px 7px;
+        border: 1px solid var(--Border);
+        border-radius: 12px;
+
+        i {
+            font-size: 15px;
+        }
+    }
+
+    .btn-edit {
+        background-color: var(--bg-4);
+
+        &:hover {
+            color: var(--bg-4);
+            background-color: var(--Primary);
+            @include transition3();
+        }
+    }
+    .btn-remove {
+        &:hover {
+            color: var(--White);
+            background-color: var(--Secondary);
+            @include transition3();
+        }
+    }
+}

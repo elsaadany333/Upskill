@@ -1,0 +1,100 @@
+.widget-tabs,
+.tabs-with-filter {
+  .widget-menu-tab {
+  }
+
+  &.style-row {
+    .widget-menu-tab {
+      @include d-flex();
+      gap: 41px;
+      border-bottom: 1px solid var(--Border);
+
+      .item-title {
+        @include transition3();
+        cursor: pointer;
+        position: relative;
+        padding-bottom: 21px;
+        flex-shrink: 0;
+        font-size: 20px;
+        list-style: 30px;
+        font-weight: 500;
+
+        &::after {
+          position: absolute;
+          content: "";
+          bottom: 0px;
+          left: auto;
+          right: 0;
+          width: 0;
+          height: 1px;
+          background-color: var(--Secondary);
+          @include transition3;
+        }
+
+        &.active,
+        &:hover {
+          color: var(--Secondary);
+
+          &::after {
+            width: 100%;
+            left: 0px;
+            right: auto;
+          }
+        }
+      }
+    }
+  }
+
+  &.style-small {
+    .widget-menu-tab {
+      @include d-flex();
+      gap: 41px;
+
+      .item-title {
+        @include transition3();
+        cursor: pointer;
+        position: relative;
+        flex-shrink: 0;
+        font-size: 20px;
+        list-style: 30px;
+        font-weight: 500;
+        color: var(--Soft-Text);
+
+        &::after {
+          position: absolute;
+          content: "";
+          bottom: 0px;
+          left: auto;
+          right: 0;
+          width: 0;
+          height: 1px;
+          background-color: var(--Secondary);
+          @include transition3;
+        }
+
+        &.active,
+        &:hover {
+          color: var(--Secondary);
+
+          &::after {
+            width: 100%;
+            left: 0px;
+            right: auto;
+          }
+        }
+      }
+    }
+
+    &.type-left {
+      .widget-menu-tab {
+        justify-content: flex-start;
+      }
+    }
+
+    &.type-center {
+      .widget-menu-tab {
+        justify-content: center;
+      }
+    }
+  }
+}

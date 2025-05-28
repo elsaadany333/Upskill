@@ -1,0 +1,177 @@
+.nice-select {
+  border-radius: 12px;
+  border: 1px solid var(--Primary) !important;
+  padding: 15px 21px !important;
+  &.border-radius-1 {
+    border-radius: 120px;
+    padding: 12.5px 25px;
+  }
+  &::after {
+    right: 10px;
+    border-color: var(--Secondary);
+  }
+  > span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--Primary);
+  }
+  > .list {
+    margin-top: 11px;
+    border: 1px solid var(--Border);
+    border-radius: 16px;
+    max-height: unset;
+    padding: 28px 20px 20px 21px;
+    .option {
+      padding: 0 15px;
+      border-radius: 12px;
+      font-weight: 400;
+      font-size: 15px;
+      color: var(--Primary);
+      position: relative;
+      &.selected {
+        color: var(--Primary);
+        font-weight: 400;
+        &::after {
+          position: absolute;
+          font-family: $fontIcon !important;
+          content: "\e90a";
+          right: 18px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    &.style-radio {
+      padding: 28px 20px 30px 21px;
+      .option {
+        @include flex(center, flex-start);
+        padding-left: 41px !important;
+        &::after {
+          position: absolute;
+          left: 15px;
+          top: 50%;
+          transform: translateY(-50%);
+          content: "";
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          border: 1px solid var(--Border);
+        }
+        &.selected {
+          &::after {
+            border: 4px solid var(--Primary);
+          }
+        }
+      }
+    }
+  }
+  &.open {
+    border-color: var(--Border) !important;
+    z-index: 50;
+  }
+  &.style-white {
+    span {
+      &.current {
+        color: var(--White) !important;
+      }
+    }
+    &::after {
+      border-color: var(--White) !important;
+    }
+  }
+  &.default {
+    padding: 0;
+    padding-right: 18px;
+    border: 0 !important;
+    &::after {
+      right: 0;
+      top: 44%;
+      right: 2px;
+    }
+    ul.list {
+      width: 220px;
+      right: 0;
+      left: unset;
+    }
+  }
+}
+
+.tf-select {
+  select {
+    position: relative;
+    border-radius: 12px;
+    border: 1px solid var(--Border) !important;
+    padding: 12px 20px;
+    font-size: 15px;
+    line-height: 28px;
+    color: var(--Secondary);
+    outline: none;
+    @include transition3;
+    &:focus {
+      border-color: var(--Secondary) !important;
+    }
+  }
+}
+
+.tf-field-label {
+  position: relative;
+  .tf-input {
+    padding: 12px 18px;
+    &:focus {
+      border-color: var(--Black);
+    }
+    &:not(:placeholder-shown),
+    &:focus {
+      ~ .tf-label {
+        top: 0;
+        transform: translateY(-50%);
+        padding: 0 8px;
+        background-color: var(--White);
+      }
+    }
+    &::placeholder {
+      color: transparent;
+    }
+  }
+  .tf-label {
+    position: absolute;
+    top: 11px;
+    left: 18px;
+    transition: all 0.1s ease;
+    cursor: text;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 28px;
+    color: var(--Secondary);
+  }
+}
+
+.tf-select-label {
+  position: relative;
+  z-index: 2;
+  .select-label {
+    position: absolute;
+    top: 11px;
+    left: 18px;
+    transition: all 0.1s ease;
+    cursor: text;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 28px;
+    color: var(--Secondary);
+    z-index: 51;
+  }
+  &.focused {
+    .select-label {
+      top: 0;
+      transform: translateY(-50%);
+      padding: 0 8px;
+      background-color: var(--White);
+    }
+  }
+}
+
+select {
+  appearance: none;
+}

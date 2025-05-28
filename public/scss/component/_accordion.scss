@@ -1,0 +1,165 @@
+.tf-accordion {
+    .tf-accordion-item {
+        position: relative;
+        .tf-accordion-header {
+            padding-bottom: 20px;
+            .tf-accordion-button {
+                padding-right: 20px;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 30px;
+                &::after {
+                    content: "\e90f";
+                    font-family: $fontIcon;
+                    transition: all 0.3s ease-in-out;
+                    font-size: 12px;
+                }
+            }
+            .tf-accordion-button {
+                &:is(.collapsed) {
+                    &::after {
+                        content: "\e90f";
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+        .tf-accordion-content p {
+            font-size: 15px;
+        }
+    }
+}
+.tf-accordion-default {
+    padding: 42px 60px 26px;
+    background-color: var(--bg-4);
+    border-radius: 12px;
+    .tf-accordion-item {
+        position: relative;
+        padding: 11px 0 20px ;
+        border-bottom: 1px solid var(--Border);
+        .tf-accordion-button {
+            .rectangle-314 {
+                margin-right: 10px;
+                padding: 0 2px;
+                border-radius: 4px;
+                background-color: var(--Secondary);
+                transition: all 0.3s ease-in-out;
+            }
+            &::after {
+                content: "\e90f";
+                position: absolute;
+                right: 0;
+                font-family: $fontIcon;
+            }
+        }
+        .tf-accordion-button.collapsed {
+            .rectangle-314 {
+                padding: 0 2px;
+                background-color: var(--Primary);
+            }
+        }
+    }
+    .tf-accordion-item:last-child {
+        border: none;
+        padding-bottom: 10px;
+    }
+}
+.tf-accordion-style-2 {
+    @include d-flex();
+    flex-direction: column;
+    gap: 20px;
+    .tf-accordion-item {
+        padding: 22px 0px 19px 30px;
+        border: 1px solid var(--Border);
+        border-radius: 12px;
+        .tf-accordion-header {
+            padding-bottom: 0px;
+            .tf-accordion-button {
+                @include d-flex();
+                justify-content: space-between;
+            }
+            span {
+                padding: 0 30px 0 0;
+            }
+           
+        }
+    }
+    .tf-accordion-content{
+        padding-right: 10px;
+        p{
+            margin-top: 20px;
+        }
+
+    }
+}
+.tf-accordion-style-3 {
+    @include d-flex();
+    flex-direction: column;
+    gap: 20px;
+    .tf-accordion-item {
+        padding: 30px 30px 15px 30px;
+        border: 1px solid var(--Border);
+        border-radius: 4px;
+        .tf-accordion-header {
+            position: relative;
+            @include d-flex();
+            justify-content: space-between;
+            .tf-accordion-button {
+                position: relative;
+                padding: 0 30px;
+                &::after {
+                    position: absolute;
+                    left: 0;
+                }
+            }
+        }
+        .tf-accordion-content {
+            .list:first-child {
+                border-top: 1px solid var(--Border);
+            }
+            .list {
+                position: relative;
+                @include d-flex();
+                align-items: center;
+                gap: 10px;
+                padding: 20px 0;
+                .icon {
+                    >i {
+                        font-size: 15px;
+                    }
+                }
+                .text {
+                    font-size: 15px;
+                }
+                .tf-accordion-btn {
+                    position: absolute;
+                    right: 0;
+                }
+            }
+            .btn-add {
+                @include d-flex();
+                gap: 10px;
+                .btn-article {
+                    background-color: var(--bg-1);
+                    color: var(--Primary);
+                    border-color: var(--Primary);
+
+                    &:hover {
+                        background-color: var(--Primary);
+                        color: var(--White);
+                    }
+                }
+                .btn-Description {
+                    background-color: var(--bg-4);
+                    color: var(--Secondary);
+                    border-color: var(--Secondary);
+
+                    &:hover {
+                        background-color: var(--Secondary);
+                        color: var(--White);
+                    }
+                }
+            }
+        }
+    }
+}

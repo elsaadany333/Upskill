@@ -1,0 +1,117 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?druq6r');
+  src:  url('fonts/icomoon.eot?druq6r#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?druq6r') format('truetype'),
+    url('fonts/icomoon.woff?druq6r') format('woff'),
+    url('fonts/icomoon.svg?druq6r#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-twitter:before {
+  content: "\e900";
+}
+.icon-search:before {
+  content: "\e901";
+}
+.icon-triangular-down:before {
+  content: "\e902";
+}
+.icon-shopcart:before {
+  content: "\e903";
+}
+.icon-flash:before {
+  content: "\e904";
+}
+.icon-arrow-top-right:before {
+  content: "\e905";
+}
+.icon-star:before {
+  content: "\e906";
+}
+.icon-arrow-left:before {
+  content: "\e907";
+}
+.icon-arrow-right:before {
+  content: "\e908";
+}
+.icon-star-1:before {
+  content: "\e909";
+}
+.icon-check:before {
+  content: "\e90a";
+}
+.icon-apple:before {
+  content: "\e90b";
+}
+.icon-chplay:before {
+  content: "\e90c";
+}
+.icon-medal-1:before {
+  content: "\e90d";
+}
+.icon-keyboard:before {
+  content: "\e90e";
+}
+.icon-arrow-top:before {
+  content: "\e90f";
+}
+.icon-arrow-bottom:before {
+  content: "\e910";
+}
+.icon-quote:before {
+  content: "\e911";
+}
+.icon-play:before {
+  content: "\e912";
+}
+.icon-pause:before {
+  content: "\e913";
+}
+.icon-time-return:before {
+  content: "\e914";
+}
+.icon-star-3:before {
+  content: "\e915";
+}
+.icon-newsletter:before {
+  content: "\e916";
+}
+.icon-home:before {
+  content: "\e917";
+}
+.icon-extremely:before {
+  content: "\e918";
+}
+.icon-like:before {
+  content: "\e919";
+}
+.icon-dislike:before {
+  content: "\e91a";
+}
+.icon-troubleshooting:before {
+  content: "\e91b";
+}
+.icon-google:before {
+  content: "\e91c";
+}
+.icon-triangular-right:before {
+  content: "\e91d";
+}

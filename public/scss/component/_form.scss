@@ -1,0 +1,252 @@
+form {
+    position: relative;
+    z-index: 30;
+    textarea,
+    input[type="text"],
+    input[type="password"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="week"],
+    input[type="number"],
+    input[type="email"],
+    input[type="url"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="color"] {
+        outline: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        width: 100%;
+        padding: 8px 19px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 28px;
+        background-color: var(--White);
+        border: 1px solid var(--Border);
+        border-radius: 4px;
+        color: var(--Soft-Text);
+        overflow: hidden;
+        margin-bottom: 0;
+        &::placeholder {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 28px;
+            color: var(--Soft-Text);
+        }
+        &.style-default {
+            padding: 0;
+            border: 0 !important;
+            border-radius: 0;
+            background-color: transparent;
+        }
+        &.style-1 {
+            font-size: 15px;
+            border-radius: 0;
+            padding: 18px 0 3px;
+            border: 0;
+            border-bottom: 2px solid var(--Border);
+            color: var(--Soft-Text);
+        }
+    }
+    button,
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"] {
+        background-color: transparent;
+        overflow: hidden;
+        padding: 0;
+    }
+    textarea {
+        height: 140px;
+    }
+    .cols {
+        @include flex(center, center);
+        gap: 22px 30px;
+        width: 100%;
+        &.cols-two {
+            > * {
+                width: 50%;
+            }
+        }
+    }
+}
+
+.form-search {
+    fieldset input {
+        padding-right: 45px;
+    }
+    .button-submit {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        @include center(0, -50%);
+        height: 20px;
+        button {
+            padding: 0;
+        }
+        i {
+            color: var(--Soft-Text);
+        }
+    }
+}
+
+fieldset {
+    margin-bottom: 0px;
+    width: 100%;
+}
+
+.form-subscribe {
+    padding-bottom: 13px;
+    border-bottom: 1px solid var(--Border);
+    input {
+        font-size: 15px !important;
+        color: var(--Primary) !important;
+        padding-right: 70px !important;
+        ::placeholder {
+            font-size: 15px !important;
+            color: var(--Primary) !important;
+        }
+    }
+    .button-submit {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+}
+
+.tf-field {
+    position: relative;
+    .tf-input {
+        @include transition1();
+        &:not(:placeholder-shown),
+        &:focus {
+            border-color: var(--Primary);
+            ~ .tf-field-label {
+                top: 6px;
+                &.type-textarea {
+                    top: -7px;
+                }
+            }
+        }
+        &::placeholder {
+            color: transparent;
+        }
+    }
+    .tf-field-label {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0px;
+        transition: all 0.1s ease;
+        cursor: text;
+        &.type-textarea {
+            top: 3px;
+            transform: translateY(0);
+        }
+    }
+}
+
+.form-search-courses {
+    fieldset input {
+        padding-right: 90px;
+        padding-left: 70px;
+        height: 80px;
+        border: 0;
+        font-size: 15px;
+        color: var(--Primary);
+        &::placeholder {
+            font-size: 15px;
+            color: var(--Primary);
+        }
+    }
+    .icon {
+        position: absolute;
+        left: 30px;
+        top: 50%;
+        @include center(0, -50%);
+        @include flex(center, center);
+        i {
+            font-size: 20px;
+        }
+    }
+    .button-submit {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        @include center(0, -50%);
+        button {
+            @include flex(center, center);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--Primary);
+            padding: 0;
+            @include transition3();
+            &:hover {
+                background-color: #0d112b;
+            }
+        }
+        i {
+            color: var(--White);
+        }
+    }
+}
+// quynh---------------------
+// form-search-course-------
+.form-search-course {
+    position: relative;
+    border: 1px solid var(--Border);
+    border-radius: 12px;
+    fieldset input {
+        padding-right: 90px;
+        padding-left: 70px;
+        height: 80px;
+        border: 0;
+        font-size: 15px;
+        color: var(--Primary);
+
+        &::placeholder {
+            font-size: 15px;
+            color: var(--Primary);
+        }
+    }
+    .icon {
+        position: absolute;
+        left: 30px;
+        top: 50%;
+        @include center(0, -50%);
+        @include flex(center, center);
+
+        i {
+            font-size: 20px;
+        }
+    }
+    .button-submit {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        @include center(0, -50%);
+        button {
+            @include flex(center, center);
+            background-color: var(--Primary);
+            padding: 20px 30px;
+            border-radius: 12px;
+            color: var(--White);
+            gap: 10px;
+        }
+        i {
+            color: var(--White);
+        }
+    }
+}
+// /form-search-course------
+// /quynh_end----------------
+.form-get-it-now{
+    .cols {
+        margin-bottom: 23px;
+    }
+}

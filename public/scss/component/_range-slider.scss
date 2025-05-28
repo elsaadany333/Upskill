@@ -1,0 +1,44 @@
+/*range-slider
+    ---------------------*/
+    .range-slider {
+        #range-two-val {
+            margin-bottom: 10px;
+            height: 6px;
+            box-shadow: none;
+            border: 0;
+            background-color: var(--Border);
+    
+            .noUi-connects {
+                .noUi-connect {
+                    background-color: var(--Secondary);
+                }
+            }
+    
+            .noUi-origin {
+                .noUi-handle {
+                    cursor: pointer;
+                    width: 16px;
+                    height: 16px;
+                    background-color: var(--White);
+                    border: 2px solid var(--Secondary);
+                    border-radius: 50%;
+                    right: -8px;
+    
+                    &::after,
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    
+        .value {
+            @include flex(center, center);
+            > div {
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 28px;
+                color: var(--Primary);
+            }
+        }
+    }
