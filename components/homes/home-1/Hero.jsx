@@ -49,7 +49,7 @@ export default function Hero() {
                 className="fw-7 font-cardo wow fadeInUp"
                 data-wow-delay="0.1s"
               >
-                Get <span className="tf-secondary-color">2500+Islam</span> Best
+                Get <span className="tf-secondary-color">2500</span> Best
                 Online <br />
                 Courses From UpSkilll
               </h1>
